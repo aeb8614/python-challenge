@@ -38,3 +38,19 @@ for candidate in results:
     print(candidate[0] + ": " + str(candidate[1]) + "% " + "(" + str(candidate[2]) + ")")
 print("-----------------------")
 print("Winner: " + candidate_names[0])
+
+#creating and writting to a text file
+result = open("resultmain2.txt", "w") 
+ 
+result.write("Election Results" +"\n")
+result.write("-----------------------" +"\n")
+result.write("Total Votes: " + str(total_votes) +"\n")
+result.write("-----------------------" +"\n")
+results = zip(candidate_names, percent_results, vote_counts)
+for candidate in results:
+    result.write(candidate[0] + ": " + str(candidate[1]) + "% " + "(" + str(candidate[2]) + ")" + "\n")
+result.write("-----------------------" +"\n")
+result.write("Winner: " + candidate_names[0] +"\n")
+
+ 
+result.close() 

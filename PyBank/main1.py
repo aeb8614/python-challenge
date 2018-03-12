@@ -42,3 +42,14 @@ print("Total Revenue: " + str(total_revenue))
 print("average Revenue Change: $" + str(average_revenue))
 print("Greatest Increase in Revenue: " + str(month_max) + " ($" + str(max_revenue) + ")")
 print("Greatest Decrease in Revenue: " + str(month_min) + " ($" + str(min_revenue) + ")")
+
+#creating and writting to a text file
+result = open("resultmain1.txt", "w") 
+ 
+result.write("Total Months: " + str(total_months) + "\n") 
+result.write("Total Revenue: " + str(total_revenue) + "\n") 
+result.write("average Revenue Change: $" + str(average_revenue)+ "\n") 
+result.write("Greatest Increase in Revenue: " + str(month_max) + " ($" + str(max_revenue) + ")" + "\n")
+result.write("Greatest Decrease in Revenue: " + str(month_min) + " ($" + str(min_revenue) + ")" + "\n") 
+ 
+result.close() 
